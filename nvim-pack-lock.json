@@ -1,8 +1,9 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "73ea297bc665c936b51797d5a55599536ffee0d8",
-      "src": "https://github.com/saghen/blink.cmp"
+      "rev": "b19413d214068f316c78978b08264ed1c41830ec",
+      "src": "https://github.com/saghen/blink.cmp",
+      "version": "1.0.0 - 2.0.0"
     },
     "conform.nvim": {
       "rev": "1bf8b5b9caee51507aa51eaed3da5b0f2595c6b9",
