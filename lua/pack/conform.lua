@@ -9,7 +9,7 @@ conform.setup({
 		gofumpt = {
 			append_args = { '-extra' },
 			env = {
-				GOFUMPT_SPLIT_LONG_LINES = "on"
+				GOFUMPT_SPLIT_LONG_LINES = 'on'
 			}
 		},
 	},

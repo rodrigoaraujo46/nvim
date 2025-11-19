@@ -15,8 +15,8 @@ autocmd('TextYankPost', {
 	end,
 })
 
-autocmd({ "BufWritePre" }, {
+autocmd({ 'BufWritePre' }, {
 	group = animus,
-	pattern = "*",
+	pattern = '*',
 	command = [[%s/\s\+$//e]],
 })
