@@ -1,9 +1,9 @@
 local severity = vim.diagnostic.severity
 
 local signs = {
-	[severity.ERROR] = ' ',
-	[severity.WARN]  = ' ',
-	[severity.INFO]  = ' ',
+	[severity.ERROR] = ' ',
+	[severity.WARN]  = ' ',
+	[severity.INFO]  = ' ',
 	[severity.HINT]  = ' '
 }
 

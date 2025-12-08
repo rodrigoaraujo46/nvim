@@ -30,7 +30,7 @@ require 'lualine'.setup({
 		lualine_b = { 'filename' },
 		lualine_c = { { 'branch', icon = '' } },
 
-		lualine_x = { { 'diff', symbols = { added = ' ', modified = ' ', removed = ' ' } }, { 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' '} } },
+		lualine_x = { { 'diff', symbols = { added = ' ', modified = '󰤌 ', removed = ' ' }, padding = {left = 0, right = 2} }, { 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' }, padding = {left = 0, right = 2} } },
 		lualine_y = { { 'filetype', icon_only = true, padding = 0 } },
 		lualine_z = {}
 	}
