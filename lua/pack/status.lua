@@ -13,6 +13,7 @@ lua_rose.command.a.bg = ''
 
 lua_rose.normal.b.bg = ''
 lua_rose.normal.c.bg = ''
+lua_rose.normal.c.fg = '#9ccfd8'
 
 lua_rose.normal.c.gui = ''
 lua_rose.normal.a.gui = 'bold'
@@ -26,11 +27,11 @@ require 'lualine'.setup({
 		component_separators = '',
 	},
 	sections = {
-		lualine_a = { { 'mode', padding = 0 } },
-		lualine_b = { 'filename' },
-		lualine_c = { { 'branch', icon = '' } },
+		lualine_a = { { 'mode', padding = { right = 1 } } },
+		lualine_b = { { 'tabs', mode = 1 } },
+		lualine_c = { { 'branch', icon = '', padding = { left = 1 } } },
 
-		lualine_x = { { 'diff', symbols = { added = ' ', modified = '󰤌 ', removed = ' ' }, padding = {left = 0, right = 2} }, { 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' }, padding = {left = 0, right = 2} } },
+		lualine_x = { { 'diff', symbols = { added = ' ', modified = '󰤌 ', removed = ' ' }, padding = { left = 0, right = 2 } }, { 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' }, padding = { left = 0, right = 2 } } },
 		lualine_y = { { 'filetype', icon_only = true, padding = 0 } },
 		lualine_z = {}
 	}
