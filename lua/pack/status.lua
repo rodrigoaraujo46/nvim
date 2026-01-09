@@ -27,7 +27,17 @@ require('lualine').setup({
 		component_separators = '',
 	},
 	sections = {
-		lualine_a = { { 'mode', padding = { right = 1 } } },
+		lualine_a = { {
+			'mode',
+			fmt = function(str)
+				local reg = vim.fn.reg_recording()
+				if reg ~= '' then
+					return str .. '  ' .. reg
+				end
+				return str
+			end,
+			padding = { right = 1 }
+		} },
 		lualine_b = { { 'tabs', mode = 1 } },
 		lualine_c = { { 'branch', icon = '', padding = { left = 2 } } },
 
