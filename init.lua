@@ -1,19 +1,19 @@
-require 'config.globals'
-require 'config.options'
-require 'config.keys'
-require 'config.diagnostic'
-require 'config.auto'
+require('config.globals')
+require('config.options')
+require('config.keys')
+require('config.diagnostic')
+require('config.auto')
 
-require 'pack.telescope'
-require 'pack.lsp'
-require 'pack.treesitter'
-require 'pack.conform'
-require 'pack.lint'
-require 'pack.harpoon'
-require 'pack.blink'
-require 'pack.trouble'
-require 'pack.undo'
-require 'pack.fugitive'
-require 'pack.copilot'
-require 'pack.colors'
-require 'pack.status'
+require('pack.telescope')
+require('pack.lsp')
+require('pack.treesitter')
+require('pack.conform')
+require('pack.lint')
+require('pack.harpoon')
+require('pack.blink')
+require('pack.trouble')
+require('pack.undo')
+require('pack.fugitive')
+require('pack.copilot')
+require('pack.colors')
+require('pack.status')

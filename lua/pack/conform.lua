@@ -1,6 +1,6 @@
 vim.pack.add({ { src = 'http://github.com/stevearc/conform.nvim' } })
 
-local conform = require 'conform'
+local conform = require('conform')
 conform.setup({
 	default_format_opts = {
 		lsp_format = 'fallback',

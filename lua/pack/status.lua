@@ -3,7 +3,7 @@ vim.pack.add({
 	{ src = 'https://github.com/nvim-tree/nvim-web-devicons' }
 })
 
-local lua_rose = require 'lualine.themes.rose-pine-alt'
+local lua_rose = require('lualine.themes.rose-pine-alt')
 lua_rose.normal.a.bg = ''
 lua_rose.visual.a.bg = ''
 lua_rose.insert.a.bg = ''
@@ -19,7 +19,7 @@ lua_rose.normal.c.gui = ''
 lua_rose.normal.a.gui = 'bold'
 lua_rose.normal.b.gui = ''
 
-require 'lualine'.setup({
+require('lualine').setup({
 	options = {
 		theme = lua_rose,
 		globalstatus = true,

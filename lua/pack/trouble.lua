@@ -1,6 +1,6 @@
 vim.pack.add({ { src = 'https://github.com/folke/trouble.nvim' } })
 
-local trouble = require 'trouble'
+local trouble = require('trouble')
 trouble.setup({ auto_close = true })
 
 vim.keymap.set('n', '<leader>tt', function()
