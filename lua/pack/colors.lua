@@ -5,7 +5,7 @@ vim.pack.add({
 require('rose-pine').setup({
 	dark_variant = 'moon',
 	extend_background_behind_borders = false,
-	styles = { transparency = true }
+	styles = { transparency = true, italic = false }
 })
 
 ColorMyPencils = {
