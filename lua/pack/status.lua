@@ -13,11 +13,8 @@ lua_rose.command.a.bg = ''
 
 lua_rose.normal.b.bg = ''
 lua_rose.normal.c.bg = ''
-lua_rose.normal.c.fg = '#9ccfd8'
-
-lua_rose.normal.c.gui = ''
+lua_rose.normal.c.fg = Colors.foam
 lua_rose.normal.a.gui = 'bold'
-lua_rose.normal.b.gui = ''
 
 require('lualine').setup({
 	options = {

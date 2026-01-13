@@ -6,7 +6,7 @@ vim.pack.add({
 
 local notify = require('notify')
 notify.setup({
-	background_colour = '#232136',
+	background_colour = Colors.base,
 })
 
 require('hardtime').setup({
