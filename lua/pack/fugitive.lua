@@ -21,10 +21,10 @@ vim.api.nvim_create_autocmd('BufWinEnter', {
 
 		-- NOTE: It allows me to easily set the branch i am pushing and any tracking
 		-- needed if i did not set the branch up correctly
-		vim.keymap.set('n', '<leader>t', ':Git push -u origin', { buffer = bufnr, remap = false, desc = 'Fugitive push' });
+		vim.keymap.set('n', '<leader>t', ':Git push -u origin', { buffer = bufnr, remap = false, desc = 'Fugitive push set tracking' });
 	end,
 })
 
-vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
-vim.keymap.set('n', 'gu', '<cmd>diffget //2<CR>')
-vim.keymap.set('n', 'gh', '<cmd>diffget //3<CR>')
+vim.keymap.set('n', '<leader>gs', vim.cmd.Git, { desc = 'Git status' })
+vim.keymap.set('n', 'gu', '<cmd>diffget //2<CR>', { desc = 'diffget left ' })
+vim.keymap.set('n', 'gh', '<cmd>diffget //3<CR>', { desc = 'diffget right' })

@@ -4,31 +4,6 @@ vim.pack.add({
 })
 
 local builtin = require('telescope.builtin')
-local actions = require('telescope.actions')
-local action_state = require('telescope.actions.state')
-
-local original_colorscheme = builtin.colorscheme
-builtin.colorscheme = function(opts)
-	opts = opts or {}
-	local original_attach = opts.attach_mappings
-
-	opts.attach_mappings = function(prompt_bufnr, map)
-		map('i', '<CR>', function()
-			local selection = action_state.get_selected_entry()
-			if selection and selection.value then
-				ColorMyPencils(selection.value)
-			end
-			actions.close(prompt_bufnr)
-		end, { desc = 'Set colorscheme' })
-
-		if original_attach then
-			return original_attach(prompt_bufnr, map)
-		end
-		return true
-	end
-
-	original_colorscheme(opts)
-end
 
 vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Fuzzy files' })
 
