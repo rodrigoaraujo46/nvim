@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "99": {
+      "rev": "701b4c34a1e3de34327d21cc6f51c79b49d26b51",
+      "src": "https://github.com/ThePrimeagen/99"
+    },
     "blink.cmp": {
       "rev": "b19413d214068f316c78978b08264ed1c41830ec",
       "src": "https://github.com/saghen/blink.cmp",
@@ -18,8 +22,8 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "harpoon": {
-      "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
-      "src": "https://github.com/ThePrimeagen/harpoon",
+      "rev": "146b19ccd77c10548bd5aecf4f323ef2dc4a95e0",
+      "src": "https://github.com/rodrigoaraujo46/harpoon",
       "version": "'harpoon2'"
     },
     "lualine.nvim": {
@@ -27,7 +31,7 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "fe661093f4b05136437b531e7f959af2a2ae66c8",
+      "rev": "80c0130c5f16b551865a69e832f1feadeedb5fbe",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason.nvim": {
@@ -64,9 +68,9 @@
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "telescope.nvim": {
-      "rev": "84b9ba066d1860f7a586ce9cd732fd6c4f77d1d9",
+      "rev": "3333a52ff548ba0a68af6d8da1e54f9cd96e9179",
       "src": "https://github.com/nvim-telescope/telescope.nvim",
-      "version": "'v0.1.9'"
+      "version": "0.2.0 - 0.3.0"
     },
     "trouble.nvim": {
       "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
