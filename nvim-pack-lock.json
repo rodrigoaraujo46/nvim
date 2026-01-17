@@ -1,7 +1,7 @@
 {
   "plugins": {
     "99": {
-      "rev": "701b4c34a1e3de34327d21cc6f51c79b49d26b51",
+      "rev": "3bbb74f9a094f1c780b3f7f3fec40de88a8e27b9",
       "src": "https://github.com/ThePrimeagen/99"
     },
     "blink.cmp": {
@@ -10,11 +10,11 @@
       "version": "1.0.0 - 2.0.0"
     },
     "conform.nvim": {
-      "rev": "238f542a118984a88124fc915d5b981680418707",
+      "rev": "5ac2bb57a9096f00ca50e1a3c46020d5930319b8",
       "src": "http://github.com/stevearc/conform.nvim"
     },
     "copilot.lua": {
-      "rev": "9688ca7ad7583c659979591d006e5ff0b0b0da07",
+      "rev": "0ab400d547814b04b39a069208ff7b40ab22dfb5",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "friendly-snippets": {
@@ -51,7 +51,7 @@
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
-      "rev": "5a7e5638e7d220575b1c22c8a2e099b52231886e",
+      "rev": "d19def46c112c26c17adeef88dd1253cc6d623a1",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-textobjects": {
@@ -72,6 +72,10 @@
       "src": "https://github.com/nvim-telescope/telescope.nvim",
       "version": "0.2.0 - 0.3.0"
     },
+    "todo-comments.nvim": {
+      "rev": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668",
+      "src": "https://github.com/folke/todo-comments.nvim"
+    },
     "trouble.nvim": {
       "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
       "src": "https://github.com/folke/trouble.nvim"
@@ -83,6 +87,14 @@
     "vim-fugitive": {
       "rev": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4",
       "src": "http://github.com/tpope/vim-fugitive"
+    },
+    "virt-column.nvim": {
+      "rev": "b87e3e0864211a32724a2ebf3be37e24e9e2fa99",
+      "src": "https://github.com/lukas-reineke/virt-column.nvim"
+    },
+    "zen-mode.nvim": {
+      "rev": "8564ce6d29ec7554eb9df578efa882d33b3c23a7",
+      "src": "https://github.com/folke/zen-mode.nvim"
     }
   }
 }
