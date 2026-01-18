@@ -38,7 +38,7 @@ require('lualine').setup({
 		lualine_b = { { 'tabs', mode = 1 } },
 		lualine_c = { { 'branch', icon = '', padding = { left = 2 } } },
 
-		lualine_x = { { 'diff', symbols = { added = ' ', modified = '󰤌 ', removed = ' ' }, padding = { left = 0, right = 2 } }, { 'diagnostics', padding = { left = 0, right = 2 } } },
+		lualine_x = { { 'diff', symbols = { added = ' ', modified = '󰤌 ', removed = ' ' }, padding = { left = 0, right = 2 } }, { 'diagnostics', symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' }, padding = { left = 0, right = 2 } } },
 		lualine_y = { { 'filetype', icon_only = true, padding = 0 } },
 		lualine_z = {}
 	}
