@@ -33,6 +33,9 @@ vim.diagnostic.config({
 			return signs[d.severity], highlights[d.severity]
 		end,
 		format = function(d)
+			if d.code == nil then
+				return d.message .. ' '
+			end
 			return d.message .. ' [' .. d.code .. '] '
 		end,
 		suffix = function(d)
