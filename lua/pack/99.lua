@@ -21,6 +21,6 @@ vim.keymap.set("n", "<leader>9s", function()
 	_99.search()
 end, {desc = '99 Search'})
 
-vim.keymap.set('v', '<leader>9x', function()
+vim.keymap.set('n', '<leader>9x', function()
 	_99.stop_all_requests()
 end, { desc = '99 Stop all requests' })

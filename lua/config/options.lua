@@ -18,6 +18,6 @@ vim.opt.isfname:append('@-@')
 vim.opt.updatetime = 300
 vim.opt.colorcolumn = '100'
 vim.opt.laststatus = 3
+vim.opt.showtabline = 0
 vim.opt.showmode = false
 vim.opt.cmdheight = 0
-vim.opt.showtabline = 0

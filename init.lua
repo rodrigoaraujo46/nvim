@@ -3,6 +3,7 @@ require('config.options')
 require('config.keys')
 require('config.diagnostic')
 require('config.auto')
+require('config.ui2')
 
 require('pack.telescope')
 require('pack.lsp')
