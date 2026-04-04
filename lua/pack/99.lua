@@ -17,9 +17,9 @@ vim.keymap.set('n', '<leader>9gg', function()
 	_99.vibe()
 end, { desc = '99 Vibe Code' })
 
-vim.keymap.set("n", "<leader>9s", function()
+vim.keymap.set('n', '<leader>9s', function()
 	_99.search()
-end, {desc = '99 Search'})
+end, { desc = '99 Search' })
 
 vim.keymap.set('n', '<leader>9x', function()
 	_99.stop_all_requests()

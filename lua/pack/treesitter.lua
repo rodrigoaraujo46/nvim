@@ -1,20 +1,23 @@
 vim.pack.add({
 	{ src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
-	{ src = 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects', version = 'main' }
+	{ src = 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects' }
 })
+
+local async = require('nvim-treesitter.async')
+local ts = require('nvim-treesitter')
+local install = require('nvim-treesitter.install')
 
 vim.api.nvim_create_autocmd('FileType', {
 	callback = function(args)
-		local treesitter = require('nvim-treesitter')
 		local lang = vim.treesitter.language.get_lang(args.match)
-		if vim.list_contains(treesitter.get_available(), lang) then
-			if not vim.list_contains(treesitter.get_installed(), lang) then
-				treesitter.install(lang):wait()
-			end
-			vim.treesitter.start(args.buf)
+		if vim.list_contains(ts.get_available(), lang) then
+			async.async(function()
+				async.await(install.install, lang)
+				vim.treesitter.start(args.buf, lang)
+			end)()
 		end
 	end,
-	desc = 'Enable nvim-treesitter and install parser if not installed'
+	desc = 'install parsers and start treesitter',
 })
 
 local textobjects = require 'nvim-treesitter-textobjects.select'

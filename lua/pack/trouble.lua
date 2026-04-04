@@ -11,10 +11,6 @@ vim.keymap.set('n', '<leader>tt', function()
 	trouble.toggle({ mode = 'todo' })
 end, { desc = 'Toggle Trouble(todo)' })
 
-vim.keymap.set('n', '<leader>tt', function()
-	trouble.toggle({ mode = 'todo' })
-end, { desc = 'Toggle Trouble(todo)' })
-
 vim.keymap.set('n', ']t', function()
 	trouble.next({ skip_groups = true, jump = true });
 end, { desc = 'Next Trouble item' })
