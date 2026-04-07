@@ -16,7 +16,6 @@ local highlights = {
 
 vim.diagnostic.config({
 	virtual_text = {
-		current_line = true,
 		prefix = function(d)
 			return signs[d.severity]
 		end,

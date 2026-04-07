@@ -15,6 +15,7 @@ conform.setup({
 	},
 	formatters_by_ft = {
 		go = { 'goimports', 'gofumpt' },
+		sh = { 'shfmt' },
 	}
 })
 

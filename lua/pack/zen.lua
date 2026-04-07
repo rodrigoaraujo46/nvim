@@ -1,5 +1,4 @@
 vim.pack.add({ { src = 'https://github.com/folke/zen-mode.nvim' } })
-
 local zen = require('zen-mode')
 
 zen.setup({

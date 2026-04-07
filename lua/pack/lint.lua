@@ -2,7 +2,8 @@ vim.pack.add({ { src = 'http://github.com/mfussenegger/nvim-lint' } })
 
 local lint = require('lint')
 lint.linters_by_ft = {
-	go = { 'golangcilint' }
+	go = { 'golangcilint' },
+	sh = { 'shellcheck' },
 }
 
 local lintG = vim.api.nvim_create_augroup('lint', { clear = true })
