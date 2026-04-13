@@ -1,17 +1,17 @@
 local severity = vim.diagnostic.severity
 
 local signs = {
-	[severity.ERROR] = ' ',
-	[severity.WARN]  = ' ',
-	[severity.INFO]  = ' ',
-	[severity.HINT]  = ' '
+	[severity.ERROR] = " ",
+	[severity.WARN] = " ",
+	[severity.INFO] = " ",
+	[severity.HINT] = " ",
 }
 
 local highlights = {
-	[severity.ERROR] = 'DiagnosticError',
-	[severity.WARN]  = 'DiagnosticWarn',
-	[severity.INFO]  = 'DiagnosticInfo',
-	[severity.HINT]  = 'DiagnosticHint'
+	[severity.ERROR] = "DiagnosticError",
+	[severity.WARN] = "DiagnosticWarn",
+	[severity.INFO] = "DiagnosticInfo",
+	[severity.HINT] = "DiagnosticHint",
 }
 
 vim.diagnostic.config({
@@ -22,24 +22,24 @@ vim.diagnostic.config({
 	},
 	signs = {
 		text = signs,
-		numhl = highlights
+		numhl = highlights,
 	},
 	float = {
-		header = '',
-		scope = 'line',
+		header = "",
+		scope = "line",
 		severity_sort = true,
 		prefix = function(d)
 			return signs[d.severity], highlights[d.severity]
 		end,
 		format = function(d)
 			if d.code == nil then
-				return d.message .. ' '
+				return d.message .. " "
 			end
-			return d.message .. ' [' .. d.code .. '] '
+			return d.message .. " [" .. d.code .. "] "
 		end,
 		suffix = function(d)
-			return d.source, 'Comment'
-		end
+			return d.source, "Comment"
+		end,
 	},
-	severity_sort = true
+	severity_sort = true,
 })

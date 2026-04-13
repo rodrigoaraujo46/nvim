@@ -1,3 +1,3 @@
-vim.pack.add({ { src = 'https://github.com/lukas-reineke/virt-column.nvim' } })
+vim.pack.add({ { src = "https://github.com/lukas-reineke/virt-column.nvim" } })
 
-require('virt-column').setup({ char = { '┆' } })
+require("virt-column").setup({ char = { "┆" } })

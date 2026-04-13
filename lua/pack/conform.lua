@@ -1,25 +1,46 @@
-vim.pack.add({ { src = 'http://github.com/stevearc/conform.nvim' } })
+vim.pack.add({ { src = "http://github.com/stevearc/conform.nvim" } })
 
-local conform = require('conform')
-conform.setup({
-	default_format_opts = {
-		lsp_format = 'fallback',
-	},
+local conform = require("conform")
+
+local options = {
 	formatters = {
 		gofumpt = {
-			append_args = { '-extra' },
+			append_args = { "-extra" },
 			env = {
-				GOFUMPT_SPLIT_LONG_LINES = 'on'
-			}
+				GOFUMPT_SPLIT_LONG_LINES = "on",
+			},
 		},
+		["biome-check"] = { require_cwd = true },
 	},
 	formatters_by_ft = {
-		go = { 'goimports', 'gofumpt' },
-		sh = { 'shfmt' },
-		svelte = { 'biome' }
-	}
-})
+		go = { "goimports", "gofumpt" },
+		sh = { "shfmt" },
+		lua = { "stylua" },
+		["_"] = { lsp_format = "fallback" },
+	},
+	format_on_save = true,
+}
 
-vim.keymap.set('n', '<leader>f', function()
+local biome_types = {
+	"astro",
+	"css",
+	"graphql",
+	"html",
+	"javascript",
+	"javascriptreact",
+	"json",
+	"jsonc",
+	"svelte",
+	"typescript",
+	"typescriptreact",
+	"vue",
+}
+for _, type in ipairs(biome_types) do
+	options.formatters_by_ft[type] = { "biome-check", "biome", stop_after_first = true }
+end
+
+conform.setup(options)
+
+vim.keymap.set({ "n", "v" }, "<leader>f", function()
 	conform.format()
-end, { desc = 'Format using conform' })
+end, { desc = "Format" })

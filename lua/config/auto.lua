@@ -1,22 +1,22 @@
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
-local animus = augroup('animus', {})
-local highlight = augroup('highlight', {})
+local animus = augroup("animus", {})
+local highlight = augroup("highlight", {})
 
-autocmd('TextYankPost', {
+autocmd("TextYankPost", {
 	group = highlight,
-	pattern = '*',
+	pattern = "*",
 	callback = function()
 		vim.hl.on_yank({
-			higroup = 'IncSearch',
+			higroup = "IncSearch",
 			timeout = 40,
 		})
 	end,
 })
 
-autocmd({ 'BufWritePre' }, {
+autocmd({ "BufWritePre" }, {
 	group = animus,
-	pattern = '*',
+	pattern = "*",
 	command = [[%s/\s\+$//e]],
 })
