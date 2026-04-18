@@ -3,7 +3,7 @@ vim.pack.add({ { src = "https://github.com/ThePrimeagen/99" } })
 _99 = require("99")
 
 _99.setup({
-	model = "opencode/big-pickle",
+	model = "opencode/minimax-m2.5-free",
 	md_files = { "AGENT.md" },
 })
 

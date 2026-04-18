@@ -13,10 +13,12 @@ autocmd("TextYankPost", {
 			timeout = 40,
 		})
 	end,
+	desc = "Highlight Yank",
 })
 
 autocmd({ "BufWritePre" }, {
 	group = animus,
 	pattern = "*",
 	command = [[%s/\s\+$//e]],
+	desc = "Remove spaces at the end",
 })

@@ -1,8 +1,10 @@
 vim.pack.add({
-	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
+	{ src = "https://github.com/rose-pine/neovim" },
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
+	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 })
 
+local colors = require("rose-pine.palette")
 local lua_rose = require("lualine.themes.rose-pine-alt")
 lua_rose.normal.a.bg = ""
 lua_rose.visual.a.bg = ""
@@ -13,7 +15,7 @@ lua_rose.command.a.bg = ""
 
 lua_rose.normal.b.bg = ""
 lua_rose.normal.c.bg = ""
-lua_rose.normal.c.fg = Colors.foam
+lua_rose.normal.c.fg = colors.foam
 lua_rose.normal.a.gui = "bold"
 
 require("lualine").setup({
