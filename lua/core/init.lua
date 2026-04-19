@@ -1,0 +1,6 @@
+require("core.globals")
+require("core.options")
+require("core.keys")
+require("core.auto")
+require("core.diagnostic")
+require("core.ui2")

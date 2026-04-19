@@ -1,6 +1,2 @@
-require("globals")
-require("options")
-require("keys")
-require("auto")
-require("diagnostic")
-require("ui2")
+require("core")
+require("pack")
