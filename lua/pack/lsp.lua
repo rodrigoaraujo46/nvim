@@ -6,3 +6,5 @@ vim.pack.add({
 
 require("mason").setup()
 require("mason-lspconfig").setup()
+
+vim.lsp.config("bashls", { filetypes = { "bash", "sh", "zsh" } })
