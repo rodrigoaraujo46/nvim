@@ -1,8 +1,6 @@
 vim.pack.add({ { src = "https://github.com/zbirenbaum/copilot.lua" } })
 
-require("copilot").setup({
-	suggestion = { auto_trigger = true },
-})
+require("copilot").setup({ suggestion = { auto_trigger = true } })
 
 local suggestion = require("copilot.suggestion")
 vim.keymap.set("i", "<Tab>", function()

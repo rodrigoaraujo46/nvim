@@ -8,6 +8,7 @@ local ts = require("nvim-treesitter")
 local install = require("nvim-treesitter.install")
 
 vim.api.nvim_create_autocmd("FileType", {
+	group = vim.api.nvim_create_augroup("animus_treesitter", {}),
 	callback = function(args)
 		local lang = vim.treesitter.language.get_lang(args.match)
 		if vim.list_contains(ts.get_available(), lang) then

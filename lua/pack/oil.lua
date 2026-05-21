@@ -7,6 +7,11 @@ local oil = require("oil")
 
 oil.setup({
 	default_file_explorer = true,
+	delete_to_trash = true,
+	skip_confirm_for_simple_edits = true,
+	view_options = {
+		show_hidden = true,
+	},
 })
 
-vim.keymap.set("n", "<leader>pv", oil.open, { desc = "Open file explorer" })
+vim.keymap.set("n", "-", oil.open, { desc = "Open file explorer" })

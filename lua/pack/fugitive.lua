@@ -1,7 +1,7 @@
 vim.pack.add({ { src = "http://github.com/tpope/vim-fugitive" } })
 
 vim.api.nvim_create_autocmd("User", {
-	group = vim.api.nvim_create_augroup("fugitive_group", {}),
+	group = vim.api.nvim_create_augroup("animus_fugitive", {}),
 	pattern = "FugitiveIndex",
 	callback = function()
 		vim.keymap.set("n", "<leader>p", function()

@@ -6,9 +6,8 @@ lint.linters_by_ft = {
 	gitcommit = { "gitlint" },
 }
 
-local lintG = vim.api.nvim_create_augroup("lint", { clear = true })
 vim.api.nvim_create_autocmd({ "BufRead", "InsertLeave", "BufWritePost" }, {
-	group = lintG,
+	group = vim.api.nvim_create_augroup("animus_lint", {}),
 	callback = function()
 		lint.try_lint()
 	end,
