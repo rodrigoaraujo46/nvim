@@ -17,5 +17,5 @@ vim.api.nvim_create_autocmd("User", {
 })
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Git status" })
-vim.keymap.set("n", "gu", "<cmd>diffget //2<CR>", { desc = "diffget left " })
-vim.keymap.set("n", "gh", "<cmd>diffget //3<CR>", { desc = "diffget right" })
+vim.keymap.set("n", "gh", "<cmd>diffget //2<CR>", { desc = "diffget left " })
+vim.keymap.set("n", "gl", "<cmd>diffget //3<CR>", { desc = "diffget right" })
