@@ -12,6 +12,9 @@ oil.setup({
 	view_options = {
 		show_hidden = true,
 	},
+	keymaps = {
+		["<C-p>"] = false,
+	},
 })
 
 vim.keymap.set("n", "-", oil.open, { desc = "Open file explorer" })
