@@ -4,6 +4,7 @@ local lint = require("lint")
 lint.linters_by_ft = {
 	go = { "golangcilint" },
 	gitcommit = { "gitlint" },
+	swift = { "swiftlint" },
 }
 
 vim.api.nvim_create_autocmd({ "BufRead", "InsertLeave", "BufWritePost" }, {

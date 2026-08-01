@@ -18,6 +18,8 @@ lua_rose.normal.c.bg = ""
 lua_rose.normal.c.fg = colors.foam
 lua_rose.normal.a.gui = "bold"
 
+local initial_cwd = vim.fn.getcwd(-1, -1)
+
 require("lualine").setup({
 	options = {
 		theme = lua_rose,
@@ -39,7 +41,25 @@ require("lualine").setup({
 				padding = { right = 1 },
 			},
 		},
-		lualine_b = { { "tabs", mode = 1 } },
+		lualine_b = {
+			{
+				"tabs",
+				mode = 1,
+				fmt = function(name, context)
+					if context.is_current or context.tabnr == vim.fn.tabpagenr() then
+						if vim.bo.filetype ~= "oil" then
+							return name
+						end
+						local dir = require("oil").get_current_dir()
+						if dir then
+							return vim.fn.fnamemodify(dir:gsub("/$", ""), ":t")
+						end
+					end
+
+					return vim.fn.fnamemodify(vim.fn.getcwd(0, context.tabnr), ":t")
+				end,
+			},
+		},
 		lualine_c = { { "branch", icon = "", padding = { left = 2 } } },
 
 		lualine_x = {

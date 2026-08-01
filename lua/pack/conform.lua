@@ -15,6 +15,7 @@ local options = {
 	formatters_by_ft = {
 		go = { "goimports", "gofumpt" },
 		lua = { "stylua" },
+		swift = { "swiftformat" },
 		["_"] = { lsp_format = "fallback" },
 	},
 	format_on_save = true,

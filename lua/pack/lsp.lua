@@ -8,3 +8,4 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 
 vim.lsp.config("bashls", { filetypes = { "bash", "sh", "zsh" } })
+vim.lsp.enable("sourcekit")
