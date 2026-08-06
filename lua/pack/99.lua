@@ -11,10 +11,6 @@ vim.keymap.set("v", "<leader>9v", function()
 	_99.visual()
 end, { desc = "99 Visual Fill" })
 
-vim.keymap.set("n", "<leader>9v", function()
-	_99.vibe()
-end, { desc = "99 Vibe Code" })
-
 vim.keymap.set("n", "<leader>9s", function()
 	_99.search()
 end, { desc = "99 Search" })

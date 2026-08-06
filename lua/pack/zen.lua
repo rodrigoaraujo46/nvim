@@ -18,6 +18,9 @@ zen.setup({
 
 vim.keymap.set("n", "<leader>zz", function()
 	local count = vim.v.count == 0 and 100
+	if count == 0 then
+		count = 100
+	end
 	if count < 80 then
 		count = 80
 	end

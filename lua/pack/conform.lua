@@ -16,6 +16,7 @@ local options = {
 		go = { "goimports", "gofumpt" },
 		lua = { "stylua" },
 		swift = { "swiftformat" },
+		yaml = { "yamlfmt" },
 		["_"] = { lsp_format = "fallback" },
 	},
 	format_on_save = true,

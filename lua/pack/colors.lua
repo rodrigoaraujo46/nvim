@@ -1,4 +1,9 @@
-vim.pack.add({ { src = "https://github.com/rose-pine/neovim" } })
+vim.pack.add({
+	{ src = "https://github.com/rose-pine/neovim" },
+	{ src = "https://github.com/norcalli/nvim-colorizer.lua" },
+})
+
+require("colorizer").setup()
 
 require("rose-pine").setup({
 	dark_variant = "moon",
